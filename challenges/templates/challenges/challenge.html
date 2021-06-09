@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
+    {% include "challenges/partials/header.html" %}
+
     <h1>{{ month_name|title }}'s Challenge</h1>
-{% if text%}
-    <h2>{{ text }}</h2>
-{% else %}
-    <p>No challenge fo this month yet!</p>
-{% endif %}
+    {% if text%}
+        <h2>{{ text }}</h2>
+    {% else %}
+        <p>No challenge fo this month yet!</p>
+    {% endif %}
 {% endblock %}
 
 
