@@ -1,3 +1,19 @@
-ul {
-    list-style: none;
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #cf54a6;
+    margin: 2rem 0 0 0;
+    font-weight: normal;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.fallback {
+    text-align: center;
+    color: white;
 }
