@@ -11,8 +11,7 @@
 <body>
     <form action="" method="POST">
         {% csrf_token %}
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="username" />
+        {{form}}
         <button>Send</button>
     </form>
 </body>
