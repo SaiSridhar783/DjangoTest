@@ -1,0 +1,14 @@
+{% extends 'reviews/base.html' %}
+{% load static %}
+
+{% block title %}Review A{% endblock title %}
+
+{% block css_path %}
+{% static 'reviews/single_review.css' %}
+{% endblock css_path %}
+
+{% block content %}
+<h1>{{review.user_name}}</h1>
+<p>Rating: {{review.rating}}</p>
+<p>{{review.review_text}}</p>
+{% endblock content %}

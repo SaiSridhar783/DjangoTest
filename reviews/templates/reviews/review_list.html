@@ -1,0 +1,16 @@
+{% extends 'reviews/base.html' %}
+{% load static %}
+
+{% block title %}All Reviews{% endblock title %}
+
+{% block css_path %}
+{% static 'reviews/review_list.css' %}
+{% endblock css_path %}
+
+{% block content %}
+<ul>
+    {% for review in reviews %}
+    <li><a href="">{{review.user_name}} (Rating: {{review.rating}})</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
