@@ -4,11 +4,23 @@
 {% block title %}Review A{% endblock title %}
 
 {% block css_path %}
-{% static 'reviews/single_review.css' %}
+{% static 'reviews/review.css' %}
 {% endblock css_path %}
 
 {% block content %}
 <h1>{{review.user_name}}</h1>
 <p>Rating: {{review.rating}}</p>
 <p>{{review.review_text}}</p>
+
+{% if is_favourite %}
+<p>This is a Favourite!</p>
+{% else %}
+
+<form action="/all-reviews/favourite" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="review_id" value="{{ review.id }}" />
+    <button>Favourite</button>
+</form>
+{% endif %}
+
 {% endblock content %}
